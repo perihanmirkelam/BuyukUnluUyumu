@@ -5,7 +5,7 @@ public class Kontrol {
 
 	public static void main(String[] args) {
 		
-	    System.out.println("Bir sözcük giriniz!");	
+	    System.out.println("Bir sÃ¶zcÃ¼k giriniz:");	
 		Scanner scanner = new Scanner(System.in);
 		String sozcuk = scanner.nextLine();
 		scanner.close();
@@ -15,15 +15,15 @@ public class Kontrol {
 	
 	public static void uyumluMuYazdir(String sozcuk){
 		
-		String kalinHarfler = "AIOUaıou";
-		String inceHarfler = "EİÖÜeiöü";
+		String kalinHarfler = "AIOUaÄ±ou";
+		String inceHarfler = "EÄ°Ã–ÃœeiÃ¶Ã¼";
 		
 		boolean kalinHarfVarMi = false;
 		boolean inceHarfVarMi = false;
 		
 		int unluHarfSayisi=0;	
 		
-		if(sozcuk.matches("[a-zA-ZÂâÎîİıÇçŞşÜüÖöĞğ]+")){ 
+		if(sozcuk.matches("[a-zA-ZÃ‚Ã¢ÃÃ®Ä°Ä±Ã‡Ã§ÅÅŸÃœÃ¼Ã–Ã¶ÄÄŸ]+")){ 
 			
 			for(int i=0; i<sozcuk.length(); i++){
 				char c=sozcuk.charAt(i);
@@ -42,20 +42,20 @@ public class Kontrol {
 
 				switch (durum) {  
 				  case 1:
-				    System.out.println("'" +sozcuk+"'" + " büyük ünlü uyumuna uymuyor :/");
+				    System.out.println("'" + sozcuk + "'" + " bÃ¼yÃ¼k Ã¼nlÃ¼ uyumuna uymuyor :/");
 				    break;
 				  case 2:
-				    System.out.println(sozcuk + " büyük ünlü uyumuna uyuyor :)");
+				    System.out.println("'" + sozcuk + "'" + " bÃ¼yÃ¼k Ã¼nlÃ¼ uyumuna uyuyor :)");
 				    break;
 				  case 3:
-				    System.out.println(sozcuk + " büyük ünlü uyumuna uyuyor :)");
+				    System.out.println("'" + sozcuk + "'" + " bÃ¼yÃ¼k Ã¼nlÃ¼ uyumuna uyuyor :)");
 				    break;
 				  case 4:
-				    System.out.println("En az iki heceli bir sözcük giriniz!");
+				    System.out.println("En az iki heceli bir sÃ¶zcÃ¼k giriniz!");
 				    break;
 				  }		    
 			}				
-		else System.out.println("Bir sözcük giriniz!");	
+		else System.out.println("Bir sÃ¶zcÃ¼k giriniz!");	
 	}
 }
 
