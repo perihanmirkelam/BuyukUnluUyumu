@@ -13,11 +13,11 @@ public static void uyumluMuYazdir(String sozcuk){
   int inceHarfSayisi=0, kalinHarfSayisi=0;
   if(sozcuk.matches("[a-zA-ZÂâÎîİıÇçŞşÜüÖöĞğ]+")){ 						
     for(int i=0; i<sozcuk.length(); i++){								
-      if (inceHarfler.indexOf(sozcuk.charAt(i))!=-1) unluHarfSayisi++;								
-      else if (kalinHarfler.indexOf(sozcuk.charAt(i))!=-1) unluHarfSayisi++;							
+      if (inceHarfler.indexOf(sozcuk.charAt(i))!=-1) inceHarfSayisi++;								
+      else if (kalinHarfler.indexOf(sozcuk.charAt(i))!=-1) kalinHarfSayisi++;							
     }									
-    int durum = (kalinHarfler+inceHarfler>=2) ? 						
-                ( (inceHarfler>0) ? ( (kalinHarfler>0) ? 1 : 2 ) : 2 ) : 3;				
+    int durum = (kalinHarfSayisi+inceHarfSayisi>=2) ? 						
+                ( (inceHarfSayisi>0) ? ( (kalinHarfSayisi>0) ? 1 : 2 ) : 2 ) : 3;				
     switch (durum) {  				
       case 1:				
         System.out.println("'" + sozcuk + "'" + " büyük ünlü uyumuna uymuyor :/");				
